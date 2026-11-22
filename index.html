@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>看見的不一定是真實｜認知錯覺教學簡報</title>
+<style>
+:root {
+  color-scheme: dark;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: #090f1f; color: #f1f5f9;
+}
+.slide {
+  display: none; min-height: 100vh;
+  padding: 7vh max(6vw, 24px) 100px;
+  max-width: 1450px; margin: auto;
+}
+.slide.active { display: block; }
+.eyebrow {
+  color: #67e8f9; letter-spacing: .15em;
+  font-size: .9rem; margin-bottom: 22px;
+}
+h1 {
+  font-size: clamp(2.1rem, 4.2vw, 4.5rem);
+  line-height: 1.2; margin: 0 0 22px;
+}
+h2 { color: #c4b5fd; font-weight: 500; }
+h3 { color: #93c5fd; margin-bottom: 8px; }
+p { font-size: clamp(1rem, 1.4vw, 1.3rem); line-height: 1.85; }
+.concept {
+  display: inline-block; color: #a5f3fc;
+  border: 1px solid #155e75; padding: 9px 16px;
+  border-radius: 30px; margin-bottom: 24px;
+}
+.experiment-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 36px; align-items: center;
+}
+.visual {
+  min-height: 310px; border-radius: 20px;
+  background: #17213a; padding: 24px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+.visual img {
+  display: block; max-width: 100%; max-height: 380px;
+  object-fit: contain; border-radius: 12px;
+}
+.visual p { font-size: 1rem; text-align: center; }
+.explanation { max-width: 640px; }
+.callout {
+  background: #182541; border-left: 4px solid #67e8f9;
+  padding: 18px 24px; border-radius: 10px;
+  margin-top: 22px;
+}
+.question { color: #fcd34d; }
+.references { margin-top: 24px; color: #94a3b8; }
+.ref { display: inline-block; margin: 5px 12px 5px 0; }
+.stroop {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 25px;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: bold;
+}
+.muller { width: 100%; }
+.muller svg { width: 100%; }
+table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+th, td { padding: 13px 16px; border-bottom: 1px solid #334155; text-align: left; }
+th { color: #67e8f9; }
+.bibliography { font-size: .9rem; line-height: 1.8; }
+.bibliography li { margin-bottom: 8px; overflow-wrap: anywhere; }
+a { color: #93c5fd; }
+.footnote { font-size: .85rem; color: #94a3b8; }
+.controls {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #0f172aee; border-top: 1px solid #334155;
+  display: flex; align-items: center; justify-content: center;
+  gap: 22px; padding: 15px;
+}
+button {
+  background: #155e75; color: white; border: 0;
+  border-radius: 9px; padding: 11px 20px;
+  cursor: pointer; font-size: 1rem;
+}
+button:disabled { opacity: .4; cursor: default; }
+#counter { min-width: 80px; text-align: center; }
+.progress {
+  position: fixed; bottom: 0; left: 0; height: 4px;
+  background: #22d3ee; transition: width .2s;
+}
+@media(max-width: 800px) {
+  .experiment-layout { grid-template-columns: 1fr; }
+  .slide { padding-top: 35px; }
+  .visual { min-height: 220px; }
+}
+</style>
+</head>
+<body>
+<main id="deck">
+<section class="slide" data-slide="1">
+        <div class="eyebrow">COGNITIVE ILLUSION LAB · 教學簡報</div>
+        <h1>看見的不一定是真實</h1>
+        <h2>六種認知錯覺的心理學探索</h2>
+        <p>從六個心理學實驗，探索感官、情境、預期與注意力。</p>
+        <div class="callout">學習目標：辨識六種認知錯覺，理解知覺與認知如何影響判斷。</div>
+        </section>
+<section class="slide" data-slide="2">
+        <div class="eyebrow">01 · 引起動機</div>
+        <h1>什麼是認知錯覺？</h1>
+        <p>我們看見的世界，並不只是外界刺激的直接複製。</p>
+        <p>同一張圖像可能有不同解讀；相同長度的線段，也可能看起來不同。</p>
+        <div class="callout">
+          今天要觀察的六種現象：
+          多重穩定知覺、情境影響、圖地組織、知覺預期、
+          幾何錯覺與 Stroop 效應。
+        </div>
+        <p class="question">想一想：看見與理解，是同一件事嗎？</p>
+        </section>
+<section class="slide" data-slide="3">
+        <div class="eyebrow">實驗 01 · WIKI 01</div>
+        <h1>雙重世界</h1>
+        <div class="concept">多重穩定知覺</div>
+        <div class="experiment-layout">
+          <div class="visual"><img src="images/duck_rabbit.png" alt="鴨兔錯視圖"></div>
+          <div class="explanation">
+            <h3>觀察現象</h3>
+            <p>鴨兔圖</p>
+            <h3>心理學概念</h3>
+            <p>同一個視覺刺激可能產生兩種或多種不同的知覺解讀。</p>
+            <div class="callout">
+              <strong>思考問題</strong>
+              <p>為什麼同一張圖片可以被看成不同物體？</p>
+            </div>
+          </div>
+        </div>
+        <div class="references">知識來源：<span class="ref">REF002 · Long, G. M., &amp; Toppino, T. C. (2004)</span></div>
+        </section>
+<section class="slide" data-slide="4">
+        <div class="eyebrow">實驗 02 · WIKI 02</div>
+        <h1>情境解碼</h1>
+        <div class="concept">由上而下的知覺處理</div>
+        <div class="experiment-layout">
+          <div class="visual"><img src="images/context_clear.svg" alt="情境辨識圖"></div>
+          <div class="explanation">
+            <h3>觀察現象</h3>
+            <p>相同符號在不同文字情境中的辨識</p>
+            <h3>心理學概念</h3>
+            <p>知覺不只受到感官訊息影響，也可能受到情境、經驗及既有知識影響。</p>
+            <div class="callout">
+              <strong>思考問題</strong>
+              <p>情境如何改變我們對模糊資訊的解讀？</p>
+            </div>
+          </div>
+        </div>
+        <div class="references">知識來源：<span class="ref">REF004 · Bruner, J. S., &amp; Minturn, A. L. (1955)</span></div>
+        </section>
+<section class="slide" data-slide="5">
+        <div class="eyebrow">實驗 03 · WIKI 03</div>
+        <h1>隱藏訊號</h1>
+        <div class="concept">圖地組織</div>
+        <div class="experiment-layout">
+          <div class="visual"><img src="images/rubin_clear.svg" alt="Rubin 花瓶"></div>
+          <div class="explanation">
+            <h3>觀察現象</h3>
+            <p>魯賓之杯</p>
+            <h3>心理學概念</h3>
+            <p>視覺系統會將畫面區分為主要物體與背景。</p>
+            <div class="callout">
+              <strong>思考問題</strong>
+              <p>為什麼注意力改變時，圖形與背景可能交換？</p>
+            </div>
+          </div>
+        </div>
+        <div class="references">知識來源：<span class="ref">REF003 · Treisman, A. M., &amp; Gelade, G. (1980)</span></div>
+        </section>
+<section class="slide" data-slide="6">
+        <div class="eyebrow">實驗 04 · WIKI 04</div>
+        <h1>預期植入</h1>
+        <div class="concept">知覺預期</div>
+        <div class="experiment-layout">
+          <div class="visual"><img src="images/young_old.jpg" alt="年輕女子與老婦人圖"></div>
+          <div class="explanation">
+            <h3>觀察現象</h3>
+            <p>提示文字對模糊圖像辨識的影響</p>
+            <h3>心理學概念</h3>
+            <p>先前獲得的資訊可能影響後續的知覺判斷。</p>
+            <div class="callout">
+              <strong>思考問題</strong>
+              <p>事先得到提示，會不會改變我們看見的內容？</p>
+            </div>
+          </div>
+        </div>
+        <div class="references">知識來源：<span class="ref">REF004 · Bruner, J. S., &amp; Minturn, A. L. (1955)</span></div>
+        </section>
+<section class="slide" data-slide="7">
+        <div class="eyebrow">實驗 05 · WIKI 05</div>
+        <h1>空間失真</h1>
+        <div class="concept">幾何視覺錯覺</div>
+        <div class="experiment-layout">
+          <div class="visual">
+            <div class="muller">
+              <svg viewBox="0 0 500 230" role="img"
+                   aria-label="兩條等長線段，兩端箭頭方向不同">
+                <g stroke="#f1f5f9" stroke-width="5"
+                   stroke-linecap="round" fill="none">
+                  <path d="M100 65 H400 M100 65 L140 35 M100 65 L140 95 M400 65 L360 35 M400 65 L360 95"/>
+                  <path d="M100 165 H400 M100 165 L60 135 M100 165 L60 195 M400 165 L440 135 M400 165 L440 195"/>
+                </g>
+              </svg>
+              <p>兩條水平線段實際等長，你覺得哪一條較長？</p>
+            </div>
+        </div>
+          <div class="explanation">
+            <h3>觀察現象</h3>
+            <p>穆勒－萊爾錯覺</p>
+            <h3>心理學概念</h3>
+            <p>周圍圖形與線條配置可能影響長度、大小或方向的主觀估計。</p>
+            <div class="callout">
+              <strong>思考問題</strong>
+              <p>為什麼相同長度的線段看起來可能不一樣？</p>
+            </div>
+          </div>
+        </div>
+        <div class="references">知識來源：<span class="ref">REF005 · Gregory, R. L. (1963)</span></div>
+        </section>
+<section class="slide" data-slide="8">
+        <div class="eyebrow">實驗 06 · WIKI 06</div>
+        <h1>認知衝突</h1>
+        <div class="concept">Stroop 效應</div>
+        <div class="experiment-layout">
+          <div class="visual">
+            <div class="stroop" aria-label="Stroop 顏色命名示例">
+              <span style="color:#f87171">藍</span>
+              <span style="color:#60a5fa">綠</span>
+              <span style="color:#4ade80">紅</span>
+            </div>
+            <p class="visual-note">試著說出字體顏色，而不是讀出文字。</p>
+        </div>
+          <div class="explanation">
+            <h3>觀察現象</h3>
+            <p>顏色命名作業</p>
+            <h3>心理學概念</h3>
+            <p>當文字意義與文字顏色不一致時，辨識顏色可能受到干擾。</p>
+            <div class="callout">
+              <strong>思考問題</strong>
+              <p>為什麼忽略文字意義有時比想像中困難？</p>
+            </div>
+          </div>
+        </div>
+        <div class="references">知識來源：<span class="ref">REF001 · Stroop, J. R. (1935)</span></div>
+        </section>
+<section class="slide" data-slide="9">
+        <div class="eyebrow">09 · 知識統整</div>
+        <h1>六種認知錯覺的比較與統整</h1>
+        <table>
+          <thead><tr><th>實驗</th><th>核心概念</th></tr></thead>
+          <tbody><tr><td>雙重世界</td><td>多重穩定知覺</td></tr><tr><td>情境解碼</td><td>由上而下的知覺處理</td></tr><tr><td>隱藏訊號</td><td>圖地組織</td></tr><tr><td>預期植入</td><td>知覺預期</td></tr><tr><td>空間失真</td><td>幾何視覺錯覺</td></tr><tr><td>認知衝突</td><td>Stroop 效應</td></tr></tbody>
+        </table>
+        <p class="question">這六個現象有哪些共同之處？</p>
+        </section>
+<section class="slide" data-slide="10">
+        <div class="eyebrow">10 · 學習反思</div>
+        <h1>學習反思與研究參考資料</h1>
+        <div class="callout">
+          <p>① 哪一個實驗最讓你意外？</p>
+          <p>② 情境與預期可能如何影響日常判斷？</p>
+          <p>③ 我們可以如何檢查自己的第一印象？</p>
+        </div>
+        <h3>研究參考資料</h3>
+        <ol class="bibliography"><li>Stroop, J. R. (1935). Studies of interference in serial verbal reactions. <a href="https://doi.org/10.1037/h0054651" target="_blank" rel="noopener noreferrer">DOI: 10.1037/h0054651</a></li><li>Long, G. M., &amp; Toppino, T. C. (2004). Enduring interest in perceptual ambiguity: Alternating views of reversible figures. <a href="https://doi.org/10.1037/0033-2909.130.5.748" target="_blank" rel="noopener noreferrer">DOI: 10.1037/0033-2909.130.5.748</a></li><li>Treisman, A. M., &amp; Gelade, G. (1980). A feature-integration theory of attention. <a href="https://doi.org/10.1016/0010-0285(80)90005-5" target="_blank" rel="noopener noreferrer">DOI: 10.1016/0010-0285(80)90005-5</a></li><li>Bruner, J. S., &amp; Minturn, A. L. (1955). Perceptual Identification and Perceptual Organization. <a href="https://doi.org/10.1080/00221309.1955.9710133" target="_blank" rel="noopener noreferrer">DOI: 10.1080/00221309.1955.9710133</a></li><li>Gregory, R. L. (1963). Distortion of Visual Space as Inappropriate Constancy Scaling. <a href="https://doi.org/10.1038/199678a0" target="_blank" rel="noopener noreferrer">DOI: 10.1038/199678a0</a></li></ol>
+        <p class="footnote">
+          本簡報依據 LLM Wiki 條目與文獻書目、教學摘要製作；
+          尚未核對全文的研究不作細節推論。
+        </p>
+        </section>
+</main>
+<nav class="controls" aria-label="簡報導覽">
+  <button id="prev" type="button">上一頁</button>
+  <span id="counter" aria-live="polite"></span>
+  <button id="next" type="button">下一頁</button>
+</nav>
+<div class="progress" id="progress"></div>
+<script>
+const slides = [...document.querySelectorAll(".slide")];
+let current = 0;
+function showSlide(index) {
+  current = Math.max(0, Math.min(index, slides.length - 1));
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === current);
+  });
+  document.getElementById("counter").textContent =
+    `${current + 1} / ${slides.length}`;
+  document.getElementById("prev").disabled = current === 0;
+  document.getElementById("next").disabled =
+    current === slides.length - 1;
+  document.getElementById("progress").style.width =
+    `${(current + 1) / slides.length * 100}%`;
+  window.scrollTo(0, 0);
+}
+document.getElementById("prev").onclick = () => showSlide(current - 1);
+document.getElementById("next").onclick = () => showSlide(current + 1);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") showSlide(current + 1);
+  if (event.key === "ArrowLeft") showSlide(current - 1);
+});
+showSlide(0);
+</script>
+</body>
+</html>

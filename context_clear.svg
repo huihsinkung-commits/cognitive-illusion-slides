@@ -1,0 +1,41 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 450">
+  <rect width="900" height="450" fill="#ffffff"/>
+
+  <g fill="none" stroke="#111111"
+     stroke-width="16" stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <!-- T -->
+    <path d="M100 125 H200 M150 125 V285"/>
+
+    <!-- 共用模糊字形 -->
+    <path d="M250 285 V125 M330 285 V125
+             M250 205 H330"/>
+
+    <!-- E -->
+    <path d="M380 125 V285 M380 125 H470
+             M380 205 H455 M380 285 H470"/>
+
+    <!-- C -->
+    <path d="M640 145
+             C570 100 535 160 535 205
+             C535 265 585 310 640 270"/>
+
+    <!-- 相同模糊字形 -->
+    <path d="M680 285 V125 M760 285 V125
+             M680 205 H760"/>
+
+    <!-- T -->
+    <path d="M790 125 H880 M835 125 V285"/>
+  </g>
+
+  <text x="290" y="365" text-anchor="middle"
+        fill="#111111" font-size="34"
+        font-family="sans-serif">THE</text>
+
+  <text x="710" y="365" text-anchor="middle"
+        fill="#111111" font-size="34"
+        font-family="sans-serif">CAT</text>
+</svg>
