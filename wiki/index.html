@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>認知錯覺實驗室｜LLM Wiki</title>
+
+<style>
+:root {
+  --bg: #101827;
+  --panel: #1b2940;
+  --line: #354762;
+  --text: #f1f5fb;
+  --muted: #b8c6d9;
+  --accent: #8cd9e9;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  line-height: 1.8;
+}
+header {
+  padding: 64px 24px 38px;
+  text-align: center;
+  background: linear-gradient(135deg, #172842, #263c58);
+}
+header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(30px, 5vw, 48px);
+}
+header p {
+  color: var(--muted);
+  max-width: 760px;
+  margin: 12px auto;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: #142036;
+}
+nav a, .back-link {
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 14px;
+}
+nav a:hover, .back-link:hover {
+  background: #29425d;
+}
+main {
+  width: min(1050px, 92%);
+  margin: 35px auto 70px;
+}
+.wiki-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 28px;
+  scroll-margin-top: 20px;
+}
+.topic-number {
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+h2 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+h3 {
+  color: var(--accent);
+  font-size: 17px;
+  margin-top: 25px;
+  margin-bottom: 4px;
+}
+.concept {
+  color: var(--muted);
+  font-size: 16px;
+}
+.question {
+  border-left: 3px solid var(--accent);
+  padding: 12px 18px;
+  background: #23364e;
+}
+.references {
+  padding-left: 22px;
+  overflow-wrap: anywhere;
+}
+.references li { margin-bottom: 14px; }
+.references a { color: var(--accent); }
+.ref-meta, .status {
+  color: var(--muted);
+  font-size: 13px;
+}
+.status {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 30px 20px;
+}
+@media (max-width: 600px) {
+  .wiki-card { padding: 20px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>認知錯覺實驗室</h1>
+  <p>LLM Wiki｜六種認知錯覺的心理學探索</p>
+  <p>
+    以心理學研究文獻為基礎，
+    整理知覺、注意力、情境與認知判斷的相關概念。
+  </p>
+  <p>
+    本頁為 Wiki 知識庫展示版本，
+    並非線上 LLM 即時問答系統。
+  </p>
+  <a class="back-link" href="../index.html">
+    觀看 HTML 教學簡報
+  </a>
+</header>
+
+<nav>
+<a href="#topic-01">01 雙重世界</a><a href="#topic-02">02 情境解碼</a><a href="#topic-03">03 隱藏訊號</a><a href="#topic-04">04 預期植入</a><a href="#topic-05">05 空間失真</a><a href="#topic-06">06 認知衝突</a>
+</nav>
+
+<main>
+
+    <article class="wiki-card" id="topic-01">
+      <div class="topic-number">WIKI 01</div>
+      <h2>雙重世界</h2>
+      <div class="concept">多重穩定知覺</div>
+
+      <h3>核心概念</h3>
+      <p>同一個視覺刺激可能產生兩種或多種不同的知覺解讀。</p>
+
+      <h3>實驗案例</h3>
+      <p>鴨兔圖</p>
+
+      <h3>思考問題</h3>
+      <p class="question">為什麼同一張圖片可以被看成不同物體？</p>
+
+      <h3>研究文獻</h3>
+      <ul class="references">
+        
+        <li>
+          <strong>REF002</strong>：
+          Long, G. M., &amp; Toppino, T. C.
+          (2004)。
+          Enduring interest in perceptual ambiguity: Alternating views of reversible figures。
+          <div class="ref-meta">
+            DOI：<a href="https://doi.org/10.1037/0033-2909.130.5.748" target="_blank" rel="noopener noreferrer">10.1037/0033-2909.130.5.748</a>
+          </div>
+          <div class="ref-meta">
+            文獻內容狀態：
+            已核對公開摘要
+          </div>
+        </li>
+        
+      </ul>
+
+      <div class="status">
+        Wiki 引用狀態：
+        有相關文獻
+      </div>
+    </article>
+    
+
+    <article class="wiki-card" id="topic-02">
+      <div class="topic-number">WIKI 02</div>
+      <h2>情境解碼</h2>
+      <div class="concept">由上而下的知覺處理</div>
+
+      <h3>核心概念</h3>
+      <p>知覺不只受到感官訊息影響，也可能受到情境、經驗及既有知識影響。</p>
+
+      <h3>實驗案例</h3>
+      <p>相同符號在不同文字情境中的辨識</p>
+
+      <h3>思考問題</h3>
+      <p class="question">情境如何改變我們對模糊資訊的解讀？</p>
+
+      <h3>研究文獻</h3>
+      <ul class="references">
+        
+        <li>
+          <strong>REF004</strong>：
+          Bruner, J. S., &amp; Minturn, A. L.
+          (1955)。
+          Perceptual Identification and Perceptual Organization。
+          <div class="ref-meta">
+            DOI：<a href="https://doi.org/10.1080/00221309.1955.9710133" target="_blank" rel="noopener noreferrer">10.1080/00221309.1955.9710133</a>
+          </div>
+          <div class="ref-meta">
+            文獻內容狀態：
+            待全文查核
+          </div>
+        </li>
+        
+      </ul>
+
+      <div class="status">
+        Wiki 引用狀態：
+        有相關文獻
+      </div>
+    </article>
+    
+
+    <article class="wiki-card" id="topic-03">
+      <div class="topic-number">WIKI 03</div>
+      <h2>隱藏訊號</h2>
+      <div class="concept">圖地組織</div>
+
+      <h3>核心概念</h3>
+      <p>視覺系統會將畫面區分為主要物體與背景。</p>
+
+      <h3>實驗案例</h3>
+      <p>魯賓之杯</p>
+
+      <h3>思考問題</h3>
+      <p class="question">為什麼注意力改變時，圖形與背景可能交換？</p>
+
+      <h3>研究文獻</h3>
+      <ul class="references">
+        
+        <li>
+          <strong>REF003</strong>：
+          Treisman, A. M., &amp; Gelade, G.
+          (1980)。
+          A feature-integration theory of attention。
+          <div class="ref-meta">
+            DOI：<a href="https://doi.org/10.1016/0010-0285(80)90005-5" target="_blank" rel="noopener noreferrer">10.1016/0010-0285(80)90005-5</a>
+          </div>
+          <div class="ref-meta">
+            文獻內容狀態：
+            已核對公開摘要
+          </div>
+        </li>
+        
+      </ul>
+
+      <div class="status">
+        Wiki 引用狀態：
+        有相關文獻
+      </div>
+    </article>
+    
+
+    <article class="wiki-card" id="topic-04">
+      <div class="topic-number">WIKI 04</div>
+      <h2>預期植入</h2>
+      <div class="concept">知覺預期</div>
+
+      <h3>核心概念</h3>
+      <p>先前獲得的資訊可能影響後續的知覺判斷。</p>
+
+      <h3>實驗案例</h3>
+      <p>提示文字對模糊圖像辨識的影響</p>
+
+      <h3>思考問題</h3>
+      <p class="question">事先得到提示，會不會改變我們看見的內容？</p>
+
+      <h3>研究文獻</h3>
+      <ul class="references">
+        
+        <li>
+          <strong>REF004</strong>：
+          Bruner, J. S., &amp; Minturn, A. L.
+          (1955)。
+          Perceptual Identification and Perceptual Organization。
+          <div class="ref-meta">
+            DOI：<a href="https://doi.org/10.1080/00221309.1955.9710133" target="_blank" rel="noopener noreferrer">10.1080/00221309.1955.9710133</a>
+          </div>
+          <div class="ref-meta">
+            文獻內容狀態：
+            待全文查核
+          </div>
+        </li>
+        
+      </ul>
+
+      <div class="status">
+        Wiki 引用狀態：
+        有相關文獻
+      </div>
+    </article>
+    
+
+    <article class="wiki-card" id="topic-05">
+      <div class="topic-number">WIKI 05</div>
+      <h2>空間失真</h2>
+      <div class="concept">幾何視覺錯覺</div>
+
+      <h3>核心概念</h3>
+      <p>周圍圖形與線條配置可能影響長度、大小或方向的主觀估計。</p>
+
+      <h3>實驗案例</h3>
+      <p>穆勒－萊爾錯覺</p>
+
+      <h3>思考問題</h3>
+      <p class="question">為什麼相同長度的線段看起來可能不一樣？</p>
+
+      <h3>研究文獻</h3>
+      <ul class="references">
+        
+        <li>
+          <strong>REF005</strong>：
+          Gregory, R. L.
+          (1963)。
+          Distortion of Visual Space as Inappropriate Constancy Scaling。
+          <div class="ref-meta">
+            DOI：<a href="https://doi.org/10.1038/199678a0" target="_blank" rel="noopener noreferrer">10.1038/199678a0</a>
+          </div>
+          <div class="ref-meta">
+            文獻內容狀態：
+            待完整內容查核
+          </div>
+        </li>
+        
+      </ul>
+
+      <div class="status">
+        Wiki 引用狀態：
+        有相關文獻
+      </div>
+    </article>
+    
+
+    <article class="wiki-card" id="topic-06">
+      <div class="topic-number">WIKI 06</div>
+      <h2>認知衝突</h2>
+      <div class="concept">Stroop 效應</div>
+
+      <h3>核心概念</h3>
+      <p>當文字意義與文字顏色不一致時，辨識顏色可能受到干擾。</p>
+
+      <h3>實驗案例</h3>
+      <p>顏色命名作業</p>
+
+      <h3>思考問題</h3>
+      <p class="question">為什麼忽略文字意義有時比想像中困難？</p>
+
+      <h3>研究文獻</h3>
+      <ul class="references">
+        
+        <li>
+          <strong>REF001</strong>：
+          Stroop, J. R.
+          (1935)。
+          Studies of interference in serial verbal reactions。
+          <div class="ref-meta">
+            DOI：<a href="https://doi.org/10.1037/h0054651" target="_blank" rel="noopener noreferrer">10.1037/h0054651</a>
+          </div>
+          <div class="ref-meta">
+            文獻內容狀態：
+            待全文查核
+          </div>
+        </li>
+        
+      </ul>
+
+      <div class="status">
+        Wiki 引用狀態：
+        有相關文獻
+      </div>
+    </article>
+    
+</main>
+
+<footer>
+  <p>認知錯覺實驗室｜LLM Wiki 知識整理成果</p>
+  <p>文獻資料依原始 JSON 的查核狀態呈現。</p>
+</footer>
+</body>
+</html>
